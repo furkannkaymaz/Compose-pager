@@ -24,7 +24,7 @@ import kotlinx.coroutines.launch
 @Composable
 fun HorizontalPagerScreen() {
 
-    val items = createItems()
+    val items = getItems()
     val pagerState = rememberPagerState()
     val coroutineScope = rememberCoroutineScope()
 
@@ -56,10 +56,6 @@ fun HorizontalPagerScreen() {
                     Text(
                         text = items[currentPage].capital,
                         style = MaterialTheme.typography.h2
-                    )
-                    Text(
-                        text = items[currentPage].official_language,
-                        style = MaterialTheme.typography.h4
                     )
 
                     HorizontalPagerIndicator(
