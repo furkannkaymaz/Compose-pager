@@ -39,7 +39,7 @@ fun HorizontalPagerScreen() {
                 count = items.size,
                 state = pagerState,
                 modifier = Modifier.weight(1f)
-            ) {
+            ) { currentPage ->
                 Column(
                     modifier = Modifier.fillMaxSize(),
                     horizontalAlignment = Alignment.CenterHorizontally
